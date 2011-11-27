@@ -15,12 +15,12 @@
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation; either version 2 of the License, or
 #  any later version.
-#
+#  
 #  PotiPhoti is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
-#
+#  
 #  You should have received a copy of the GNU General Public License
 #  along with PotiPhoti; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
@@ -55,74 +55,74 @@ if (!$step) {
 
 } else {
 
-    my $pass	= $q->param('pass')    || 0;
-    my $file	= $q->param('file')    || 0;
+    my $pass    = $q->param('pass')    || 0;
+    my $file    = $q->param('file')    || 0;
     my $comment = $q->param('comment') || 0;
 
     if (!$file || !$comment || !$pass) {
-	&printForm("<p>$BASE::nullparms</p>");
+        &printForm("<p>$BASE::nullparms</p>");
     } else {
 
-	if ($password eq 'changeme' || $pass ne $password) {
-	    &printForm("<p>$BASE::passerror</p>");
-	    exit;
-	}
+        if ($password eq 'changeme' || $pass ne $password) {
+            &printForm("<p>$BASE::passerror</p>");
+            exit;
+        }
+        
+        $comment =~ s/<.+?>//g;
+        my $id = BASE::getFecha();
+        my $fecha = BASE::getFecha($id);
+        my $remoteimg = "$img$id.jpg";
+        my $remoteimg_original = "$big$id.jpg";
+        my $osizeX = 0;
+        my $osizeY = 0;
+        
+        if (!open ARCH, "> $remoteimg_original") {
+        	&printForm("<p>$BASE::outputerror $remoteimg_original ($!)</p>");
+        } else {
 
-	$comment =~ s/<.+?>//g;
-	my $id = BASE::getFecha();
-	my $fecha = BASE::getFecha($id);
-	my $remoteimg = "$img$id.jpg";
-	my $remoteimg_original = "$big$id.jpg";
-	my $osizeX = 0;
-	my $osizeY = 0;
+            my $ReadBytes;
+            my $Buffer;
+            my $Bytes;
+            
+            binmode(ARCH);
+            while ($Bytes=read($file,$Buffer,1024)){
+                print ARCH $Buffer;
+            }
+            close ARCH;
+            
+            # Resize the uploaded image
+            if (open IN, "< $remoteimg_original") {
+                my $srcImage = GD::Image->newFromJpeg(*IN);
+                close IN;
 
-	if (!open ARCH, "> $remoteimg_original") {
-		&printForm("<p>$BASE::outputerror $remoteimg_original ($!)</p>");
-	} else {
+                # Create a thumbnail where the biggest side is X
+                # Save original size for later reference
+                my $maxthumbsize = $BASE::thumbsize1;
+                ($osizeX, $osizeY) = $srcImage->getBounds();
+                if ($osizeX > $maxthumbsize || $osizeY > $maxthumbsize) {
+                    my ($thumbb,$x,$y) = Thumbnail::create($srcImage, $maxthumbsize);
+    
+                    # Save the thumbnail
+                    if (open OUT, "> $remoteimg") {
+                        binmode OUT;
+                        print OUT $thumbb->jpeg;
+                        close OUT;
+                    } else {
+                        &printForm("<p>$BASE::outputerror $remoteimg ($!)</p>");
+                    }
+                } else {
+                    # We do not need to resize image, so a hardlink will be used to
+                    # reference the original image.
+                    link("$remoteimg_original", "$remoteimg") || &printForm("<p>$BASE::outputerror $remoteimg ($!)</p>");
+                }
+            }
 
-	    my $ReadBytes;
-	    my $Buffer;
-	    my $Bytes;
-
-	    binmode(ARCH);
-	    while ($Bytes=read($file,$Buffer,1024)){
-		print ARCH $Buffer;
-	    }
-	    close ARCH;
-
-	    # Resize the uploaded image
-	    if (open IN, "< $remoteimg_original") {
-		my $srcImage = GD::Image->newFromJpeg(*IN);
-		close IN;
-
-		# Create a thumbnail where the biggest side is X
-		# Save original size for later reference
-		my $maxthumbsize = $BASE::thumbsize1;
-		($osizeX, $osizeY) = $srcImage->getBounds();
-		if ($osizeX > $maxthumbsize || $osizeY > $maxthumbsize) {
-		    my ($thumbb,$x,$y) = Thumbnail::create($srcImage, $maxthumbsize);
-
-		    # Save the thumbnail
-		    if (open OUT, "> $remoteimg") {
-			binmode OUT;
-			print OUT $thumbb->jpeg;
-			close OUT;
-		    } else {
-			&printForm("<p>$BASE::outputerror $remoteimg ($!)</p>");
-		    }
-		} else {
-		    # We do not need to resize image, so a hardlink will be used to
-		    # reference the original image.
-		    link("$remoteimg_original", "$remoteimg") || &printForm("<p>$BASE::outputerror $remoteimg ($!)</p>");
-		}
-	    }
-
-	    my $remotexml = "$xml$id.xml";
-	    if (!open XML, "> $remotexml") {
-		    &printForm("<p>$BASE::outputerror $remotexml ($!)</p>");
-	    } else {
-
-		print XML "<?xml version=\"1.0\" encoding=\"$charset\"?>
+            my $remotexml = "$xml$id.xml";
+            if (!open XML, "> $remotexml") {
+        	    &printForm("<p>$BASE::outputerror $remotexml ($!)</p>");
+            } else {
+            	
+            	print XML "<?xml version=\"1.0\" encoding=\"$charset\"?>
 <?xml-stylesheet type=\"text/xsl\" href=\"../transform.xsl\"?>
 <Foto>
   <Archivo>../$remoteimg</Archivo>
@@ -134,12 +134,12 @@ if (!$step) {
   <Texto><![CDATA[$comment]]></Texto>
 </Foto>
 ";
-		close(XML);
-		&printForm("<p>$BASE::uploadok</p>");
-	    }
-
-	}
-
+            	close(XML);
+                &printForm("<p>$BASE::uploadok</p>");
+            }
+            
+        }
+        
     }
 
 }

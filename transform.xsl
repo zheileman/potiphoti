@@ -6,19 +6,19 @@
     <head>
       <link rel="stylesheet" href="../photostyles.css" type="text/css" />
       <script type="text/javascript">
-	function resizeIframe() {
-		i = parent.document.getElementById(window.name);
-		iHeight = document.body.scrollHeight;
-		i.style.height = iHeight + 15 + "px";
-	}
-	function OpenComments(c) {
-	    window.open(c,'photocomments','width=320,height=390,scrollbars=no,status=yes');
-	}
-	function openBigPhoto(p,w,h) {
-	    ww = w + 10;
-	    wh = h + 20;
-	    window.open(p,'bigphoto','width='+ww+',height='+wh+',scrollbars=no,status=yes');
-	}
+        function resizeIframe() {
+        	i = parent.document.getElementById(window.name);
+        	iHeight = document.body.scrollHeight;
+        	i.style.height = iHeight + 15 + "px";
+        }
+        function OpenComments(c) {
+            window.open(c,'photocomments','width=320,height=390,scrollbars=no,status=yes');
+        }
+        function openBigPhoto(p,w,h) {
+            ww = w + 10;
+            wh = h + 20;
+            window.open(p,'bigphoto','width='+ww+',height='+wh+',scrollbars=no,status=yes');
+        }
       </script>
     </head>
     <body onload="resizeIframe()">
@@ -39,24 +39,24 @@
       </center>
       <br />
       <div class="photobodyiframe">
-	<xsl:value-of select="Texto"/>
-	<br /><br />
+        <xsl:value-of select="Texto"/>
+        <br /><br />
       </div>
       <div class="posted">
-	<a href="../?id={ID}" target="newwindow">permalink</a> :: <a href="../_c.cgi?id={ID}" onclick="OpenComments(this.href); return false">comment</a> ..
-	<xsl:value-of select="Fecha"/>
+        <a href="../?id={ID}" target="newwindow">permalink</a> :: <a href="../_c.cgi?id={ID}" onclick="OpenComments(this.href); return false">comment</a> .. 
+        <xsl:value-of select="Fecha"/>
       </div>
       <xsl:for-each select="Comentario">
-	<div class="commentbody">
-	  <xsl:value-of select="Texto"/>
-	</div>
-	<div class="commentposted">
-	  <a href="mailto:{Url}">
-	    <xsl:value-of select="Autor"/>
-	  </a>
-	   |
-	  <xsl:value-of select="Fecha"/>
-	</div>
+        <div class="commentbody">
+          <xsl:value-of select="Texto"/>
+        </div>
+        <div class="commentposted">
+          <a href="mailto:{Url}">
+            <xsl:value-of select="Autor"/>
+          </a>
+           | 
+          <xsl:value-of select="Fecha"/>
+        </div>
       </xsl:for-each>
     </xsl:for-each>
     </body>

@@ -1,22 +1,22 @@
 # Spanish Strings
 # Translate to other languages please! Filename must look like fr-FR.language
 
-$totalphotos	= "&#8226;&nbsp;Numero de fotos: ";
-$totalsize	= "&#8226;&nbsp;Tamaño usado:";
-$showall	= "&#8226;&nbsp;Mostrar todas";
-$upload 	= "&#8226;&nbsp;Enviar foto";
-$nullparms	= "ERROR: parametros insuficientes.";
-$passerror	= "ERROR: password incorrecto.";
-$outputerror	= "ERROR: no se puede abrir el fichero de salida: ";
-$uploadok	= "OK: la imagen ha sido enviada.";
-$noid		= "ERROR: falta el identificador de foto.";
-$invalidtext	= "Alguno de los campos no contenia texto valido.";
-$commentok	= "El comentario se ha enviado correctamente.";
-$commenterror	= "Se produjo un error al enviar el comentario.";
-$labelname	= "Nombre:";
-$labelemail	= "Email:";
-$labelcancel	= "Cancelar";
-$labelsend	= "Enviar";
+$totalphotos    = "&#8226;&nbsp;Numero de fotos: ";
+$totalsize      = "&#8226;&nbsp;Tamaño usado:";
+$showall        = "&#8226;&nbsp;Mostrar todas";
+$upload         = "&#8226;&nbsp;Enviar foto";
+$nullparms      = "ERROR: parametros insuficientes.";
+$passerror      = "ERROR: password incorrecto.";
+$outputerror    = "ERROR: no se puede abrir el fichero de salida: ";
+$uploadok       = "OK: la imagen ha sido enviada.";
+$noid           = "ERROR: falta el identificador de foto.";
+$invalidtext    = "Alguno de los campos no contenia texto valido.";
+$commentok      = "El comentario se ha enviado correctamente.";
+$commenterror   = "Se produjo un error al enviar el comentario.";
+$labelname      = "Nombre:";
+$labelemail     = "Email:";
+$labelcancel    = "Cancelar";
+$labelsend      = "Enviar";
 
 
 
