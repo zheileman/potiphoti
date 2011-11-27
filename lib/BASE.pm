@@ -45,18 +45,19 @@ $xml   = $datadir;
 
 $version = "Powered by Poti<b>Photi</b> v0.5";
 
+# Make necessary directories
+my $oldmask = umask(0); # Needed to set 777 permits correctly
+mkdir($datadir, 0777) if (!-e $datadir);
+mkdir($big, 	0777) if (!-e $big);
+mkdir($img, 	0777) if (!-e $img);
+mkdir($thumb, 	0777) if (!-e $thumb);
+umask($oldmask); # Put umask back
+
 if (!-e $datadir || !-w $datadir) {
     # Critical error
     print "Content-type: text/html\n\n";
     print "ERROR: no data directory found, or 777 permits not set.";
     exit(1);
-} else {
-    # Make necessary directories
-    my $oldmask = umask(0); # Needed to set 777 permits correctly
-    mkdir($big,   0777) if (!-e $big);
-    mkdir($img,   0777) if (!-e $img);
-    mkdir($thumb, 0777) if (!-e $thumb);
-    umask($oldmask); # Put umask back
 }
 
 # Extract config #################################################################
