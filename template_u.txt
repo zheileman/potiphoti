@@ -67,7 +67,7 @@
 <div id="links">
 
 <div class="mimenu">
-<a href=".">Home</a> :: <a href="https://sourceforge.net/projects/potiphoti">PotiPhoti</a>
+<a href=".">Home</a> :: <a href="http://github.com/zheileman/potiphoti">PotiPhoti</a>
 </div>
 
 <br />

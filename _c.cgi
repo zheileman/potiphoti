@@ -3,10 +3,10 @@
 #################################################################################
 #  _C.CGI
 #
-#  Author	: Zheileman (zheileman at kalendas.net)
-#  URL		: http://potiphoti.sourceforge.net
+#  Author 	: Zheileman (zheileman at gmail.com)
+#  URL		: http://github.com/zheileman/potiphoti
 #
-#  Copyright 2003-2004, Zheileman.
+#  Copyright 2003-2011, Zheileman.
 #
 #
 #  This file is part of PotiPhoti.
