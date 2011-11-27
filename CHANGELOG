@@ -14,6 +14,14 @@ Software published under the terms of the GNU General Public License.
 VERSION CHANGES
 ---------------
 
+0.6 - 27/11/2011
+Project moved from Sourceforge to Github.
+Updated URLs and Copyright info.
+Changed logo.jpg (I'm the photo author, no rights reserved, you can use it freely).
+Data directory removed. Now it will be created automatically.
+Minor changes to styling.
+
+
 0.5 - 27/02/2004
 New: go back arrow.
 New: show all photos.
@@ -27,16 +35,13 @@ Fixed: problem creating initial directories for images.
 Minor changes.
 
 
-
 0.3 - 12/02/2004
 Added: internationalization.
 Added: templates.
 Added: independent configuration file.
 A lot of general improvements.
 First public release.
-It's a "usable" photolog but it lacks many functions that I'll put
-in the future.
-
+It's a "usable" photolog but it lacks many functions that I'll put in the future.
 
 
 0.2 - ??/01/2004
@@ -44,8 +49,6 @@ Improvements.
 Private version.
 
 
-
 0.1 - ??/08/2003
 I begin writing the first code lines.
 Private version.
-
