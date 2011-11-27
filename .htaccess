@@ -1,15 +1,17 @@
+<IfModule mod_rewrite.c>
+RewriteEngine off
+</IfModule>
+
 Options +ExecCGI
 AddHandler cgi-script cgi
 
 AddType text/xml .xml
 AddType text/xml .xsl
 
+DirectoryIndex _p.cgi
+
 <Files config.txt>
     <Limit GET>
     deny from all
     </Limit>
 </Files>
-
-<IfModule mod_dir.c>
-     DirectoryIndex _p.cgi
-</IfModule>
