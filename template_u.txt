@@ -36,7 +36,6 @@
 <table width="100%" border="0" cellspacing="5" cellpadding="2">
   <tr>
     <td width="30%" align="right">Password:</td>
-    <td width="70%"><input name="pass" type="password" id="pass" size="12" maxlength="10" /></td>
   </tr>
   <tr>
     <td width="30%" align="right">Image:</td>
