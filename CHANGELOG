@@ -1,0 +1,51 @@
+______________________________________
+
+PotiPhoti, Yet another simple photolog
+______________________________________
+
+
+Copyright 2003-2004, Zheileman (zheileman at kalendas.net)
+http://potiphoti.sourceforge.net
+
+Software published under the terms of the GNU General Public License.
+
+
+---------------
+VERSION CHANGES
+---------------
+
+0.5 - 27/02/2004
+New: go back arrow.
+New: show all photos.
+New: extra info now has own template.
+Updated readme file.
+Minor changes and fixes.
+
+
+0.4 - 17/02/2004
+Fixed: problem creating initial directories for images.
+Minor changes.
+
+
+
+0.3 - 12/02/2004
+Added: internationalization.
+Added: templates.
+Added: independent configuration file.
+A lot of general improvements.
+First public release.
+It's a "usable" photolog but it lacks many functions that I'll put
+in the future.
+
+
+
+0.2 - ??/01/2004
+Improvements.
+Private version.
+
+
+
+0.1 - ??/08/2003
+I begin writing the first code lines.
+Private version.
+

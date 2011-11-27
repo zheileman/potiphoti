@@ -1,0 +1,15 @@
+<div class="infolateral">
+
+<p>
+<a href="?all=1"><!--<SHOWALL>--></a>
+<br />
+<a href="_u.cgi"><!--<UPLOAD>--></a>
+</p>
+
+<p>
+<!--<TOTALPHOTOS>-->
+<br />
+<!--<TOTALSIZE>-->
+</p>
+
+</div>

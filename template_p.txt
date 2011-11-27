@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<!--<CHARSET>-->" />
+<meta name="title" content="<!--<TITLE>-->" />
+<meta name="description" content="<!--<DESCRIPTION>-->" />
+<meta name="keywords" content="<!--<KEYWORDS>-->" />
+<meta name="robots" content="index, no follow" />
+<link rel="stylesheet" href="photostyles.css" type="text/css" />
+<title><!--<TITLE>--></title>
+
+<script type="text/javascript">
+<!--
+function high(which2){
+  theobject=which2
+  highlighting=setInterval("highlightit(theobject)",40)
+}
+
+function low(which2){
+  clearInterval(highlighting)
+  which2.filters.alpha.opacity=40
+}
+
+function highlightit(cur2){
+  if (cur2.filters.alpha.opacity<100)
+    cur2.filters.alpha.opacity+=10
+  else if (window.highlighting)
+    clearInterval(highlighting)
+}
+//-->
+</script>
+</head>
+
+<body>
+
+<div id="banner">
+<img src="logo.jpg" alt="" />
+</div>
+
+<div id="content">
+
+<div class="blogbanner">
+... my photos<br />
+</div>
+<div class="quote">P H O T O L O G</div>
+<br />
+
+<div class="blog"><br />
+<div class="photobody">
+
+<!--<MINIFOTOS>-->
+
+<br />
+<br />
+
+<!--<FOTOACTUAL>-->
+
+<br />
+<br />
+
+</div>
+</div>
+
+</div>
+
+<div id="links">
+
+<div class="mimenu">
+<a href=".">Home</a> :: <a href="https://sourceforge.net/projects/potiphoti">PotiPhoti</a>
+</div>
+
+<br />
+<br />
+
+
+<!--<INFOLATERAL>-->
+
+<!--<POWEREDBY>-->
+
+</div>
+
+<br clear="all" />
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<!--<CHARSET>-->" />
+<meta name="title" content="<!--<TITLE>-->" />
+<meta name="description" content="<!--<DESCRIPTION>-->" />
+<meta name="keywords" content="<!--<KEYWORDS>-->" />
+<meta name="robots" content="no index, no follow" />
+<link rel="stylesheet" href="photostyles.css" type="text/css" />
+<title><!--<TITLE>--></title>
+</head>
+
+<body>
+
+<div id="banner">
+<img src="logo.jpg" alt="" />
+</div>
+
+<div id="content">
+
+<div class="blogbanner">
+... my photos<br />
+</div>
+<div class="quote">P H O T O L O G</div>
+
+<div class="blog"><br />
+<div class="photobody">
+
+<!--<ERRORES>-->
+
+<br />
+
+<form action="_u.cgi" method="post" enctype="multipart/form-data" name="FormUpload" id="FormUpload">
+<input name="step" type="hidden" value="1" />
+<table width="100%" border="0" cellspacing="5" cellpadding="2">
+  <tr>
+    <td width="30%" align="right">Password:</td>
+    <td width="70%"><input name="pass" type="password" id="pass" size="12" maxlength="10" /></td>
+  </tr>
+  <tr>
+    <td width="30%" align="right">Image:</td>
+    <td width="70%"><input name="file" type="file" id="file" size="12" /></td>
+  </tr>
+  <tr>
+    <td width="30%" align="right" valign="top">Comment:</td>
+    <td width="70%" valign="top"><textarea name="comment" cols="20" rows="10" id="comment"></textarea></td>
+  </tr>
+  <tr>
+    <td width="30%" align="right">&nbsp;</td>
+    <td width="70%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="30%" align="right">&nbsp;</td>
+    <td width="70%" align="center"><input name="upload" type="submit" id="upload" value="Upload" /></td>
+  </tr>
+</table>
+</form>
+
+<br />
+<br />
+
+</div>
+</div>
+
+</div>
+
+<div id="links">
+
+<div class="mimenu">
+<a href=".">Home</a> :: <a href="https://sourceforge.net/projects/potiphoti">PotiPhoti</a>
+</div>
+
+<br />
+<br />
+
+
+</div>
+
+<br clear="all" />
+
+</body>
+</html>

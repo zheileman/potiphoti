@@ -1,0 +1,16 @@
+# PotiPhoti basic configuration
+
+# Metatags
+[CHARSET]=iso-8859-1
+[TITLE]=Mi primer Photolog
+[DESCRIPTION]=Photolog de tematica variada
+[KEYWORDS]=photolog fotolog fotos amigos
+
+# Misc
+[LANGUAGE]=es-ES
+[PASSWORD]=changeme
+[THUMBSIZE1]=275
+[THUMBSIZE2]=50
+[IFRAMESTYLE]=width:290px;height:500px;overflow:hidden;border:none
+[SPHOTOSTYLE]=border:1px solid #CC0000
+[EXTRAINFO]=yes

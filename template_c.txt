@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<!--<CHARSET>-->" />
+<meta name="title" content="<!--<TITLE>-->" />
+<meta name="description" content="<!--<DESCRIPTION>-->" />
+<meta name="keywords" content="<!--<KEYWORDS>-->" />
+<meta name="robots" content="no index, no follow" />
+<link rel="stylesheet" href="photostyles.css" type="text/css" />
+<title><!--<TITLE>--></title>
+
+<script type="text/javascript">
+<!--
+function formCheck(frm) {
+ with (document.comments_form) {
+  if ((author.value == "") || (url.value == "") || (text.value == "")) {
+    alert("Debes rellenar todos los campos.");
+    author.focus();
+    return false;
+  }
+ }
+}
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#F3F3F3">
+
+<div class="blog">
+
+<div class="blogbanner">... talk to me</div>
+
+<div class="commentbody">
+
+<!--<CUERPO>-->
+
+<br /><br />
+
+</div>
+
+</div>
+
+</body>
+</html>

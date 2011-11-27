@@ -1,0 +1,24 @@
+# English Strings
+# Translate to other languages please! Filename must look like fr-FR.language
+
+$totalphotos	= "&#8226;&nbsp;Total photos: ";
+$totalsize	= "&#8226;&nbsp;Total size:";
+$showall	= "&#8226;&nbsp;Show all";
+$upload 	= "&#8226;&nbsp;Send photo";
+$nullparms	= "ERROR: insufficient parameters.";
+$passerror	= "ERROR: invalid password.";
+$outputerror	= "ERROR: cannot open output file: ";
+$uploadok	= "OK: image uploaded.";
+$noid		= "ERROR: photo identifier not found.";
+$invalidtext	= "Some of the fields did not contain valid text.";
+$commentok	= "The commentary has been successfully sent.";
+$commenterror	= "Error sending commentary.";
+$labelname	= "Name:";
+$labelemail	= "Email:";
+$labelcancel	= "Cancel";
+$labelsend	= "Send";
+
+
+
+# Do not remove next line!
+1;
